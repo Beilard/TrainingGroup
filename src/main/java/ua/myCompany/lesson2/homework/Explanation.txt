@@ -1,0 +1,7 @@
+Object.equals(Obj obj) - returns boolean, compares 2 objects in a generic way. Needs to be overridden along with .hashCode
+Object.hashCode() - returns a hash value (int) of the object. Should be unique, needs an override along with .equals.
+Object.notify() - void, thread-related. Wakes up a thread after .wait() has been called. Use .notifyAll to affect all of the suspended threads.
+Object.wait() - void, suspends a thread.
+Object.toString - returns String, converts the object to a string. Usually needs an override to properly display the information.
+Object.clone()  - return a copy of the current object. Can throw an exception "CloneNotSupportedException", needs a marker interface "Cloneable" to work
+Object.finalize() - void called before the GC comes to clear stuff up.
