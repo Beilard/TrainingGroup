@@ -1,19 +1,20 @@
 package ua.myCompany.lesson1.sort;
 
-public class Sort implements ISort {
-    public void sort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = i + 1; j < arr.length - 1; j++) {
-                if (arr[i] < arr[j]) {
-                    int substitute = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[j] = substitute;
+public class Sort {
+    public static void bubbleSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+                //swaps adjacent elements
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
             }
         }
     }
 
-    public void quickSort(int[] array, int left, int right) {
+    static void quickSort(int[] array, int left, int right) {
         if (left < right) {
             int pivotIndex = partition(array, left, right); //the pivot is on its place
             quickSort(array, left, pivotIndex - 1); //sort the left array
@@ -21,7 +22,7 @@ public class Sort implements ISort {
         }
     }
 
-    private static int partition(int[] array, int left, int right) {
+    public static int partition(int[] array, int left, int right) {
         int pivot = array[right]; // choose the rightmost element as the pivot
         int partitionIndex = left; // the first element greater than the pivot
 

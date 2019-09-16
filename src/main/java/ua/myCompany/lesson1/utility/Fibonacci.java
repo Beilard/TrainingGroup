@@ -2,8 +2,8 @@ package ua.myCompany.lesson1.utility;
 
 import java.math.BigInteger;
 
-public class Fibonacci implements IFibonacci {
-    public BigInteger fibonacci(int number) {
+public class Fibonacci {
+    public static BigInteger fibonacci(int number) {
         BigInteger num1 = new BigInteger("1");
         BigInteger num2 = new BigInteger("1");
         BigInteger num3;
@@ -20,7 +20,7 @@ public class Fibonacci implements IFibonacci {
         return num2;
     }
 
-    public int fibonacciRec(int num) {
+    public static int fibonacciRec(int num) {
         return (num <= 1) ? num : (fibonacciRec(num - 1) + fibonacciRec(num - 2));
     }
 

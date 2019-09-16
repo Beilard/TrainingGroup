@@ -5,6 +5,6 @@ public class Main {
         Factorial fac = new Factorial();
         Fibonacci fib = new Fibonacci();
         System.out.println("Fibonacci: " + fib.fibonacci(10));
-        System.out.println("Factorial: " + fac.factorial(10));
+        System.out.println("Factorial: " + Factorial.factorialBig(6));
     }
 }
