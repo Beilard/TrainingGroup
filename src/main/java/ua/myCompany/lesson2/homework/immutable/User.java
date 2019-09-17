@@ -11,7 +11,11 @@ public final class User {
 
     public User(String name, Address address) {
         this.name = name;
-        this.address = new Address(address.getCity(), address.getCode());
+        if (address != null) {
+            this.address = new Address(address.getCity(), address.getCode());
+        } else {
+            this.address = null;
+        }
     }
 
     public String getName() {

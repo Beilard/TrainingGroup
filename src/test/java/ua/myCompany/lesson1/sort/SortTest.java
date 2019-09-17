@@ -20,19 +20,19 @@ public class SortTest {
 
 
     @Test
-    public void bubbleSort() {
+    public void testsBubbleSort() {
         Sort.bubbleSort(testArr);
         assertArrayEquals(anotherTest, testArr);
     }
 
     @Test
-    public void quickSort() {
+    public void testsQuickSort() {
         Sort.quickSort(testArr,0, 5);
         assertArrayEquals(anotherTest, testArr);
     }
 
     @Test
-    public void partition() {
+    public void setsPivotWithinAnArray() {
         Sort.partition(testArr, 0, 4);
         int[] partArr = {0, 5, 6, 1, 3, 4};
         assertArrayEquals(testArr, partArr);
@@ -40,7 +40,7 @@ public class SortTest {
 
 
     @Test
-    public void swap() {
+    public void shouldSwapTwoIntsWithinArray() {
         int check = testArr[0];
         Sort.swap(testArr, 0, 1);
         assertEquals(testArr[1], check);

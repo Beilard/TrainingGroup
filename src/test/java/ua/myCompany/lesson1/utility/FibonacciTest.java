@@ -7,17 +7,17 @@ import static org.junit.Assert.*;
 public class FibonacciTest {
 
     @Test
-    public void fibonacci() {
+    public void testsLoopFibonacci() {
         assertEquals(1, Fibonacci.fibonacci(1).longValue());
     }
 
     @Test
-    public void fibonacci_Second() {
+    public void testsFibonacciLoopSecond() {
         assertEquals(55, Fibonacci.fibonacci(10).longValue());
     }
 
     @Test
-    public void fibonacciRec() {
+    public void testsFibonacciRec() {
         assertEquals(55, Fibonacci.fibonacciRec(10));
     }
 }
