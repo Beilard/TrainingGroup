@@ -14,7 +14,7 @@ public class Sort {
         }
     }
 
-    static void quickSort(int[] array, int left, int right) {
+    public static void quickSort(int[] array, int left, int right) {
         if (left < right) {
             int pivotIndex = partition(array, left, right); //the pivot is on its place
             quickSort(array, left, pivotIndex - 1); //sort the left array
