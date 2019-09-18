@@ -7,12 +7,12 @@ public class User {
     private final String password;
     private final int code;
 
-    public User(String name, String surname, String email, String password, int code) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.password = password;
-        this.code = code;
+    public User(Builder builder) {
+        this.name = builder.name;
+        this.surname = builder.surname;
+        this.email = builder.email;
+        this.password = builder.password;
+        this.code = builder.code;
     }
 
     public String getName() {
@@ -33,5 +33,15 @@ public class User {
 
     public int getCode() {
         return code;
+    }
+
+    @Override
+    public String toString() {
+        return "Info about the user: " +
+                "name is '" + name + '\'' +
+                ", surname is '" + surname + '\'' +
+                ", email is '" + email + '\'' +
+                ", password is '" + password + '\'' +
+                ", code is " + code;
     }
 }
