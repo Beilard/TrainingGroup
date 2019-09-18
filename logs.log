@@ -1,0 +1,80 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for Training-Center:Training-Center-1:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-compiler-plugin @ line 37, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 37, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------< Training-Center:Training-Center-1 >------------------
+[INFO] Building Training-Center-1 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Training-Center-1 ---
+[INFO] Deleting C:\Users\gipno\IdeaProjects\TrainingCenter1\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Training-Center-1 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Training-Center-1 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 56 source files to C:\Users\gipno\IdeaProjects\TrainingCenter1\target\classes
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/LambdaDemo2.java:[9,67] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/LambdaDemo2.java:[9,73] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/LambdaDemo2.java:[9,79] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/LambdaDemo2.java:[9,81] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/LambdaDemo2.java:[10,36] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/LambdaDemo2.java:[10,42] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/LambdaDemo2.java:[10,48] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/LambdaDemo2.java:[10,50] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/BlockLambdaDemo.java:[16,30] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/BlockLambdaDemo.java:[16,70] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/BlockLambdaDemo.java:[16,76] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/BlockLambdaDemo.java:[16,82] unmappable character for encoding Cp1252
+[WARNING] /C:/Users/gipno/IdeaProjects/TrainingCenter1/src/main/java/ua/myCompany/homework/homework3/lambda/BlockLambdaDemo.java:[16,84] unmappable character for encoding Cp1252
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Training-Center-1 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\gipno\IdeaProjects\TrainingCenter1\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Training-Center-1 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 4 source files to C:\Users\gipno\IdeaProjects\TrainingCenter1\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ Training-Center-1 ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running ua.myCompany.lessons.lesson1.sort.SortTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 sec - in ua.myCompany.lessons.lesson1.sort.SortTest
+Running ua.myCompany.lessons.lesson1.utility.FactorialTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in ua.myCompany.lessons.lesson1.utility.FactorialTest
+Running ua.myCompany.lessons.lesson1.utility.FibonacciTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in ua.myCompany.lessons.lesson1.utility.FibonacciTest
+Running ua.myCompany.lessons.lesson2.enums.CalculatorTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in ua.myCompany.lessons.lesson2.enums.CalculatorTest
+
+Results :
+
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ Training-Center-1 ---
+[INFO] Building jar: C:\Users\gipno\IdeaProjects\TrainingCenter1\target\Training-Center-1-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ Training-Center-1 ---
+[INFO] Installing C:\Users\gipno\IdeaProjects\TrainingCenter1\target\Training-Center-1-1.0-SNAPSHOT.jar to C:\Users\gipno\.m2\repository\Training-Center\Training-Center-1\1.0-SNAPSHOT\Training-Center-1-1.0-SNAPSHOT.jar
+[INFO] Installing C:\Users\gipno\IdeaProjects\TrainingCenter1\pom.xml to C:\Users\gipno\.m2\repository\Training-Center\Training-Center-1\1.0-SNAPSHOT\Training-Center-1-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.425 s
+[INFO] Finished at: 2019-09-18T19:40:37+03:00
+[INFO] ------------------------------------------------------------------------
