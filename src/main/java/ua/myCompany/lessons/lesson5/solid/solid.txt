@@ -1,0 +1,3 @@
+S - single responsibility
+O - open for extension, closed for modification
+L -
