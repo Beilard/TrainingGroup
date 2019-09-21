@@ -1,13 +1,9 @@
 package ua.myCompany.homework.homework4;
 
-/* При необходимости используйте паттерны программирования, которые рассматривали.
-1. Student: id, Фамилия, Имя, Отчество, Дата рождения, Адрес, Телефон,
-Факультет, Курс, Группа.
-Создать массив объектов. Вывести:
-a) список студентов заданного факультета;
-b) списки студентов для каждого факультета и курса;
-c) список студентов, родившихся после заданного года;
-d) список учебной группы. */
+/**
+ * Holds all parameters related to a student attending a university.
+ * Contains an inner static class realisation of the builder pattern.
+ */
 
 import java.util.Objects;
 
@@ -22,9 +18,10 @@ public class User {
     private String faculty;
     private int courseYear;
     private int group;
+    private static int globalId = 1;
 
     public User(int id, String name, String surname, String secondName) {
-        this.id = id;
+        this.id = globalId++;
         this.name = name;
         this.surname = surname;
         this.secondName = secondName;
@@ -45,7 +42,7 @@ public class User {
 
     @Override
     public String toString() {
-        if (Objects.isNull(this)){
+        if (Objects.isNull(this)) {
             return "Nothing to display";
         }
         return "Student info: " +
@@ -74,6 +71,7 @@ public class User {
         private int group;
 
         Builder() {
+            id = User.globalId++;
             name = "no name info";
             surname = "no surname info";
             secondName = "no second name info";
@@ -81,17 +79,10 @@ public class User {
             address = new Address("no city", 0000);
             phoneNumber = "no phone number record";
             faculty = "faculty not assigned";
-
-
         }
 
-        public User create(){
+        public User create() {
             return new User(this);
-        }
-
-        public Builder setId(int id) {
-            this.id = id;
-            return this;
         }
 
         public Builder setName(String name) {
@@ -180,9 +171,6 @@ public class User {
         return group;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public void setName(String name) {
         this.name = name;

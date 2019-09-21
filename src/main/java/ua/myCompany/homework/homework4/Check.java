@@ -4,14 +4,9 @@ import java.util.LinkedHashSet;
 
 public class Check {
     public static void main(String[] args) {
-        LinkedHashSet<String> set = new LinkedHashSet<>();
-
-        set.add("One");
-        set.add("Two");
-        set.add("Three");
-        set.add("One");
-        for(String s : set) {
-            System.out.println(s);
-        }
+        String string = "Hello!!!";
+        String oops = string.substring(string.length()-4);
+        System.out.println(string.substring(2, 6));
+        System.out.println(oops);
     }
 }

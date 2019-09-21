@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 
 /**
- * Создать массив объектов. Вывести:
- * a) список студентов заданного факультета;
- * b) списки студентов для каждого факультета и курса;
- * c) список студентов, родившихся после заданного года;
- * d) список учебной группы.
+ * Holds the array of users and provides the tools to manage it.
+ * Method facultySet and groupSet contain unique faculty and group labels respectively.
+ * Method addStudent adds the passed user to the main array;
+ * Method printFacultyMembers prints the users of the passed faculty.
+ * Methods printAllFacultiesStudents and printAllGroupsStudents print users from all faculties and groups respectively.
+ * Methods printBornAfterYear displays users born after the passed year.
  */
 
 public class ArrayMaster {
@@ -40,6 +41,28 @@ public class ArrayMaster {
                 if (u.getFaculty().equals(s)) {
                     System.out.println(u.toString());
                 }
+            }
+        }
+    }
+
+    public void printAllGroupsStudents() {
+        for (Integer s : groupSet) {
+            System.out.println("Students of the group #" + s + ":");
+            for (User u : array) {
+                if (u.getGroup() == s) {
+                    System.out.println(u.toString());
+                }
+            }
+        }
+    }
+
+    public void printBornAfterYear(int year) {
+        System.out.println("List of students born after " + year + " :");
+        for (User u : array) {
+            String temp = u.getDateOfBirth();
+            int givenYear = Integer.parseInt(temp.substring(temp.length() - 4));
+            if (givenYear > year) {
+                System.out.println(u.toString());
             }
         }
     }
