@@ -2,11 +2,10 @@ package ua.myCompany.homework.homework4;
 
 public class Main {
     public static void main(String[] args) {
-        Director director = new Director();
-        ArrayMaster master = new ArrayMaster();
+        ArrayMaster master = ArrayMaster.getInstance();
 
-        User andrey = director.createAndrey();
-        User vlad = director.createVlad();
+        User andrey = Director.createAndrey();
+        User vlad = Director.createVlad();
 
         master.addStudent(andrey);
         master.addStudent(vlad);

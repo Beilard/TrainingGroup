@@ -1,7 +1,12 @@
 package ua.myCompany.homework.homework4;
 
-public class Director {
-    public User createAndrey() {
+/**
+ * Part of the builder pattern. Generates predefined users.
+ */
+
+class Director {
+
+    static User createAndrey() {
         return new User.Builder()
                 .setName("Andrii")
                 .setSurname("Shylin")
@@ -11,7 +16,7 @@ public class Director {
                 .create();
     }
 
-    public User createVlad() {
+    static User createVlad() {
         return new User.Builder()
                 .setName("Vlad")
                 .setSurname("Khurtin")
