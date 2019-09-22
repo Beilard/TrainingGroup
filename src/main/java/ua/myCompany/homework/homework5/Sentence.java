@@ -20,4 +20,19 @@ public class Sentence {
     public String toString() {
         return sb.replace(sb.length()-1,sb.length(), ".").toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Sentence sentence = (Sentence) o;
+
+        return sb != null ? sb.equals(sentence.sb) : sentence.sb == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return sb != null ? sb.hashCode() : 0;
+    }
 }

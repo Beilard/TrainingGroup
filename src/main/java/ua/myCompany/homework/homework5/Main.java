@@ -14,7 +14,7 @@ public class Main {
         Sentence sentence2 = new Sentence(word3, word4, word5);
         System.out.println(sentence2);
 
-        Text text1 = new Text("This is header", sentence1, sentence2);
-        System.out.println(text1);
+        Text text1 = new Text("This is a header", sentence1, sentence2);
+        text1.printText();
     }
 }

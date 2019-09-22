@@ -9,7 +9,6 @@ hashCode(), toString().
 Методы: дополнить текст, вывести на консоль текст, заголовок текста.
  */
 
-import java.util.ArrayList;
 
 public class Text {
     private String header;
@@ -29,8 +28,34 @@ public class Text {
         }
     }
 
+    void append(String string) {
+        sb.append(string).append(" ");
+    }
+
+    void printText(){
+        System.out.println(this.toString());
+    }
+
     @Override
     public String toString() {
         return "\t" + header + "\n" + sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Text text = (Text) o;
+
+        if (!header.equals(text.header)) return false;
+        return sb != null ? sb.equals(text.sb) : text.sb == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = header.hashCode();
+        result = 31 * result + (sb != null ? sb.hashCode() : 0);
+        return result;
     }
 }
