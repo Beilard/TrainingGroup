@@ -23,6 +23,7 @@ public class Text {
     void append(Sentence sentence) {
         sb.append(sentence).append(" ");
     }
+
     void append(Word word) {
         sb.append(word).append(" ");
     }
