@@ -1,13 +1,5 @@
 package ua.myCompany.homework.homework5;
 
-/* 1. Создать приложение, удовлетворяющее требованиям, приведенным в зада-
-нии. Наследование применять только в тех заданиях, в которых это логически
-обосновано. Аргументировать принадлежность классу каждого создаваемого
-метода и корректно переопределить для каждого класса методы equals(),
-hashCode(), toString().
-Создать объект класса Текст, используя классы Предложение, Слово.
-Методы: дополнить текст, вывести на консоль текст, заголовок текста.
- */
 
 
 public class Text {
@@ -28,8 +20,11 @@ public class Text {
         }
     }
 
-    void append(String string) {
-        sb.append(string).append(" ");
+    void append(Sentence sentence) {
+        sb.append(sentence).append(" ");
+    }
+    void append(Word word) {
+        sb.append(word).append(" ");
     }
 
     void printText(){

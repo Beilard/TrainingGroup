@@ -33,7 +33,9 @@ public class ArrayMaster {
 
     public void addStudent(User student) {
         array.add(student);
-        groupSet.add(student.getGroup());
+        if (student.getGroup() != 0) {
+            groupSet.add(student.getGroup());
+        }
         if (student.getFaculty() != null) {
             facultySet.add(student.getFaculty());
         }
@@ -79,5 +81,9 @@ public class ArrayMaster {
                 System.out.println(u.toString());
             }
         }
+    }
+
+    void reset(){
+        array = new ArrayList<>(10);
     }
 }

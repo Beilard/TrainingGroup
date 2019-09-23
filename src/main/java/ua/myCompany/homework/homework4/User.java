@@ -20,7 +20,7 @@ public class User {
     private int group;
     private static int globalId = 1;
 
-    public User(int id, String name, String surname, String secondName) {
+    public User(String name, String surname, String secondName) {
         this.id = globalId++;
         this.name = name;
         this.surname = surname;
@@ -49,10 +49,10 @@ public class User {
                 "ID - " + id +
                 ", name - " + name +
                 ", surname - " + surname +
-                ",\n second name - " + secondName +
+                ",\r\n second name - " + secondName +
                 ", date of birth - " + dateOfBirth +
                 ", address - " + address.toString() +
-                ",\n phone number " + phoneNumber +
+                ",\r\n phone number " + phoneNumber +
                 ", faculty - " + faculty +
                 ", course year - " + courseYear +
                 ", group # - " + group;

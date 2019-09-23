@@ -8,6 +8,7 @@ public class Main {
         Word word4 = new Word("me");
         Word word5 = new Word("again");
 
+        System.out.println();
         Sentence sentence1 = new Sentence(word1, word2);
         System.out.println(sentence1);
 
