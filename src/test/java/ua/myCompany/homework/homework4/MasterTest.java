@@ -3,16 +3,13 @@ package ua.myCompany.homework.homework4;
 import org.junit.*;
 
 import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
 import java.io.PrintStream;
-import java.lang.reflect.Field;
-import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class ArrayMasterTest {
+public class MasterTest {
 
-    ArrayMaster instance1 = ArrayMaster.getInstance();
+    Master instance1 = Master.getInstance();
 
     @After
     public void cleanUp() {
@@ -21,7 +18,7 @@ public class ArrayMasterTest {
 
     @Test
     public void getInstance_shouldHaveNormalBehaviour() {
-        ArrayMaster instance2 = ArrayMaster.getInstance();
+        Master instance2 = Master.getInstance();
         assertSame(instance1, instance2);
     }
 

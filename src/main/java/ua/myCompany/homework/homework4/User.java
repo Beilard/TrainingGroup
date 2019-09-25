@@ -20,14 +20,14 @@ public class User {
     private int group;
     private static int globalId = 1;
 
-    public User(String name, String surname, String secondName) {
+    User(String name, String surname, String secondName) {
         this.id = globalId++;
         this.name = name;
         this.surname = surname;
         this.secondName = secondName;
     }
 
-    public User(Builder builder) {
+    private User(Builder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.surname = builder.surname;

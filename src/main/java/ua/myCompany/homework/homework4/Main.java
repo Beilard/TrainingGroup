@@ -1,10 +1,8 @@
 package ua.myCompany.homework.homework4;
 
-import java.text.NumberFormat;
-
 public class Main {
     public static void main(String[] args) {
-        ArrayMaster master = ArrayMaster.getInstance();
+        Master master = Master.getInstance();
 
         User andrey = Director.createAndrey();
         User vlad = Director.createVlad();
