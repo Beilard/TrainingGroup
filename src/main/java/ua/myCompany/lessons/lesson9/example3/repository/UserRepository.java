@@ -13,7 +13,7 @@ public interface UserRepository {
     //if no users return emptyList;
     List<User> findAll();
 
-    List <User> findByName(String name);
+    List<User> findByName(String name);
 
     Optional<User> findEmail(String email);
 }

@@ -1,11 +1,13 @@
-package ua.myCompany.lessons.lesson6.task4.repository;
+package ua.myCompany.consoleApplication.repository;
 
-import ua.myCompany.lessons.lesson6.task4.domain.Student;
+import ua.myCompany.consoleApplication.domain.Student;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
 
-public class StudentRepo implements StudentRepository {
+public class StudentRepositoryImpl implements StudentRepository {
     private Map<Long, Student> idToStudents = new HashMap<>();
     private static Long counter = 0L;
 
@@ -22,6 +24,9 @@ public class StudentRepo implements StudentRepository {
 
     @Override
     public void update(Student student) {
+        if (Objects.isNull(student)) {
+            throw new IllegalArgumentException("Null is not accepted");
+        }
         idToStudents.forEach((k, v) -> {
             if (v.equals(student)) {
                 v = student;
@@ -32,5 +37,15 @@ public class StudentRepo implements StudentRepository {
     @Override
     public Student deleteById(Long id) {
         return idToStudents.remove(id);
+    }
+
+    @Override
+    public Optional<Student> findByEmail(String email) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Map<Long, Student> findAll() {
+        return idToStudents;
     }
 }

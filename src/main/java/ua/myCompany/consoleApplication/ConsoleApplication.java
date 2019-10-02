@@ -1,4 +1,4 @@
-package ua.myCompany.lessons.lesson6.task4;
+package ua.myCompany.consoleApplication;
 
 public class ConsoleApplication {
     public static void main(String[] args) {

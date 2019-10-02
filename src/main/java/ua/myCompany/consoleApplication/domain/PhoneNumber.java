@@ -1,4 +1,4 @@
-package ua.myCompany.lessons.lesson6.task4.domain;
+package ua.myCompany.consoleApplication.domain;
 
 public class PhoneNumber {
     private final String countryCode;

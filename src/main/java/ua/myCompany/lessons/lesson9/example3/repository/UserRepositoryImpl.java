@@ -27,7 +27,9 @@ public class UserRepositoryImpl implements UserRepository{
     }
 
     @Override
-    public Optional<User> findEmail(User user) {
+    public Optional<User> findEmail(String email) {
         return Optional.empty();
     }
+
+
 }
