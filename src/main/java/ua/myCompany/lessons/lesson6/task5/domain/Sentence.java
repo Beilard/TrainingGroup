@@ -1,4 +1,4 @@
-package ua.myCompany.lessons.lesson6.domain;
+package ua.myCompany.lessons.lesson6.task5.domain;
 
 import java.util.List;
 

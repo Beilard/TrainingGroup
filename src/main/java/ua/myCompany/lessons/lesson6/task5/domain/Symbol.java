@@ -1,9 +1,9 @@
-package ua.myCompany.lessons.lesson6.domain;
+package ua.myCompany.lessons.lesson6.task5.domain;
 
-public class Sylmbol {
+public class Symbol {
     private final char symbol;
 
-    public Sylmbol(char symbol) {
+    public Symbol(char symbol) {
         this.symbol = symbol;
     }
 

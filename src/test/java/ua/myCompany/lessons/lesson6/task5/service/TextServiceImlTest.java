@@ -1,13 +1,6 @@
-package ua.myCompany.lessons.lesson6.service;
+package ua.myCompany.lessons.lesson6.task5.service;
 
 import org.junit.Test;
-import ua.myCompany.lessons.lesson6.domain.Letter;
-import ua.myCompany.lessons.lesson6.domain.Sentence;
-import ua.myCompany.lessons.lesson6.domain.Text;
-import ua.myCompany.lessons.lesson6.domain.Word;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 import static org.junit.Assert.*;
 

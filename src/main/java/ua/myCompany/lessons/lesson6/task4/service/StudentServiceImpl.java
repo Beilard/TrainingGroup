@@ -12,8 +12,8 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student register(Student student) {
-        if(student ==null) {
-            throw new IllegalArgumentException("");
+        if (student == null) {
+            throw new IllegalArgumentException("No student being passed");
         }
         return studentRepo.save(student);
     }
