@@ -1,5 +1,6 @@
 package ua.myCompany.consoleApplication.repository;
 
+import ua.myCompany.consoleApplication.domain.Member;
 import ua.myCompany.consoleApplication.domain.Student;
 
 import java.util.Map;
@@ -16,7 +17,7 @@ public interface StudentRepository {
     //R
     Student findById(Long id);
     Optional<Student> findByEmail(String email);
-    Map<Long, Student> findAll();
+    Map<Long, Student> findAll(); //switch to list
     //U
     void update (Student student);
     //D

@@ -8,9 +8,10 @@ import java.util.Objects;
 
 //void methods, mock with mockito
 public class StudentValidator {
+    private static final String REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
     public boolean validate(Student student) {
-        String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-        if (!student.getEmail().matches(regex)) {
+         //private constant; password check
+        if (!student.getEmail().matches(REGEX)) {
             throw new InvalidEmailFormatException("Email format not supported");
         }
 
@@ -22,6 +23,5 @@ public class StudentValidator {
             throw new WrongClassProvidedException("Wrong class provided");
         }
         return true;
-        //not null, validate if it is not user, mapping, exception if something will go wrong
     }
 }

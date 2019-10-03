@@ -27,8 +27,8 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student register(Student student) {
-        logger.info("Start of the registration log");
-        logger.debug("Student ID and email" + student.getId() + student.getEmail());
+//        logger.info("Start of the registration log");
+//        logger.debug("Student ID and email" + student.getId() + student.getEmail());
         studentValidator.validate(student);
         String password = student.getPassword();
         String encodePassword = passwordEncoder.encode(password);
@@ -39,13 +39,18 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Student login(String email, String password) {
         String encodePassword = passwordEncoder.encode(password);
-        Student user = studentRepository.findByEmail(email).orElseThrow(() ->
-                new EntityNotFoundException("Wrong email or password"));
+        Student user = null;
+        try {
+            user = studentRepository.findByEmail(email).orElseThrow(() ->
+                    new EntityNotFoundException("Wrong email or password"));
+        } catch (EntityNotFoundException e) {
+            logger.error("Login problems: email - " + email + ", password - " + password, e);
+        }
         String userPassword = user.getPassword();
         if (userPassword.equals(password)) {
             return user;
         }
-        throw new EntityNotFoundException("Wrong email or password"); //same message
+        throw new EntityNotFoundException("Wrong email or password");
     }
 
     @Override

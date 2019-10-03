@@ -19,11 +19,8 @@ public class PasswordEncoder {
                 if ((encodedPassword[i] & 0xff) < 0x10) {
                     sb.append("0");
                 }
-
                 sb.append(Long.toString(encodedPassword[i] & 0xff, 16));
             }
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }

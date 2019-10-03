@@ -3,7 +3,7 @@ package ua.myCompany.consoleApplication.domain;
 import java.time.LocalDate;
 
 public abstract class Member {
-    private int id;
+    private int id; //wrapper
     private String name;
     private String surname;
     private String secondName;
@@ -12,7 +12,7 @@ public abstract class Member {
     private PhoneNumber phoneNumber;
     private String email;
     private String password;
-    private String role;
+    private String role; //custom
 
     public Member(int id, String name, String surname, String secondName, LocalDate dateOfBirth,
                   Address address, PhoneNumber phoneNumber, String email, String password, String role) {

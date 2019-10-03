@@ -1,6 +1,6 @@
 package ua.myCompany.homework.homework9.prototype;
 
-public class User {
+public class User implements Cloneable{
     private Address address;
     private String name;
     private String surname;
@@ -12,7 +12,7 @@ public class User {
     }
 
     public User clone() {
-        return new User(this.address.clone(), this.name, this.surname);
+        return new User(this.address, this.name, this.surname);
     }
 
     public Address getAddress() {
