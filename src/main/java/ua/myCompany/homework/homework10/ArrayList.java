@@ -2,7 +2,7 @@ package ua.myCompany.homework.homework10;
 
 import java.util.Arrays;
 
-public class ArrayList<E> implements List {
+public class ArrayList<E> implements List<E> {
     private E[] contents;
     private static final int DEFAULT_CAPACITY = 10;
     private int capacity;
@@ -32,7 +32,7 @@ public class ArrayList<E> implements List {
     }
 
     @Override
-    public void add(Object element) {
+    public void add(E element) {
         if (++size == capacity) {
             capacity *= 2;
             E[] newContents = (E[]) new Object[capacity];
@@ -42,7 +42,7 @@ public class ArrayList<E> implements List {
     }
 
     @Override
-    public Object getByIndex(int index) {
+    public E getByIndex(int index) {
         if (index < 0 || index > contents.length) {
             throw new IllegalArgumentException("Index is not in array's bounds");
         }
@@ -50,7 +50,7 @@ public class ArrayList<E> implements List {
     }
 
     @Override
-    public boolean remove(Object element) {
+    public boolean remove(E element) {
         int index = 0;
         for (int i = 0; i < size; i++) {
             if (contents[i] == element) {
