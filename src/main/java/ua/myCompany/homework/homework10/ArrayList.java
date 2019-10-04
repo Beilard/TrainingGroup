@@ -1,6 +1,7 @@
 package ua.myCompany.homework.homework10;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class ArrayList<E> implements List<E> {
     private E[] contents;
@@ -15,7 +16,7 @@ public class ArrayList<E> implements List<E> {
 
     public ArrayList(int capacity) {
         this.capacity = capacity;
-        if (size < 0) {
+        if (capacity < 0) {
             throw new IllegalArgumentException("Array size cannot be lower than 0!");
         }
         contents = (E[]) new Object[capacity];
@@ -33,12 +34,13 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public void add(E element) {
-        if (++size == capacity) {
+        if (size >= capacity) {
             capacity *= 2;
             E[] newContents = (E[]) new Object[capacity];
             System.arraycopy(contents, 0, newContents, 0, size);
         }
         contents[size] = (E) element;
+        size++;
     }
 
     @Override
@@ -59,8 +61,7 @@ public class ArrayList<E> implements List<E> {
             }
         }
 
-        System.arraycopy(contents, index + 1, contents, index, size - index);
-        size--;
+        System.arraycopy(contents, index + 1, contents, index, --size - index);
         if (size < capacity * 0.25) {
             capacity /= 2;
             E[] newContents = (E[]) new Object[capacity];
@@ -74,5 +75,22 @@ public class ArrayList<E> implements List<E> {
         capacity = DEFAULT_CAPACITY;
         size = 0;
         contents = (E[]) new Object[capacity];
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ArrayList<?> arrayList = (ArrayList<?>) o;
+        return capacity == arrayList.capacity &&
+                size == arrayList.size &&
+                Arrays.equals(contents, arrayList.contents);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(capacity, size);
+        result = 31 * result + Arrays.hashCode(contents);
+        return result;
     }
 }

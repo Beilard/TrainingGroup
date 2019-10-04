@@ -1,9 +1,13 @@
 package ua.myCompany.homework.homework10;
 
-public class LinkedLIst<T> implements List<T> {
+import java.util.Objects;
+
+public class LinkedList<T> implements List<T> {
     private int size;
     private Node<T> head;
 
+    public LinkedList() {
+    }
 
     @Override
     public int size() {
@@ -12,7 +16,7 @@ public class LinkedLIst<T> implements List<T> {
 
     @Override
     public boolean isEmpty() {
-        if (head != null) {
+        if (head == null) {
             return true;
         }
         return false;
@@ -70,12 +74,40 @@ public class LinkedLIst<T> implements List<T> {
         size = 0;
     }
 
-    private class Node<T> {
+    class Node<T> {
         private Node nextNode;
         T content;
 
         Node(T content) {
             this.content = content;
         }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Node<?> node = (Node<?>) o;
+            return Objects.equals(nextNode, node.nextNode) &&
+                    Objects.equals(content, node.content);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(nextNode, content);
+        }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LinkedList<?> list = (LinkedList<?>) o;
+        return size == list.size &&
+                Objects.equals(head, list.head);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(size, head);
     }
 }
