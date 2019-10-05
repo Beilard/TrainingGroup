@@ -17,7 +17,7 @@ public class ArrayList<E> implements List<E> {
     public ArrayList(int capacity) {
         this.capacity = capacity;
         if (capacity < 0) {
-            throw new IllegalArgumentException("Array size cannot be lower than 0!");
+            throw new IllegalArgumentException("Array capacity cannot be lower than 0!");
         }
         contents = (E[]) new Object[capacity];
     }
@@ -55,7 +55,7 @@ public class ArrayList<E> implements List<E> {
     public boolean remove(E element) {
         int index = 0;
         for (int i = 0; i < size; i++) {
-            if (contents[i] == element) {
+            if (contents[i].equals(element)) {
                 index = i;
                 break;
             }

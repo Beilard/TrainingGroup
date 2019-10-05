@@ -24,7 +24,7 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public void add(T element) {
-        Node<T> newNode = new Node<T>((T) element);
+        Node<T> newNode = new Node<T>(element);
         newNode.nextNode = null;
         if (this.isEmpty()) {
             this.head = newNode;
@@ -74,7 +74,7 @@ public class LinkedList<T> implements List<T> {
         size = 0;
     }
 
-    class Node<T> {
+    private class Node<T> {
         private Node nextNode;
         T content;
 
@@ -84,9 +84,13 @@ public class LinkedList<T> implements List<T> {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Node<?> node = (Node<?>) o;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+            Node node = (Node) o;
             return Objects.equals(nextNode, node.nextNode) &&
                     Objects.equals(content, node.content);
         }

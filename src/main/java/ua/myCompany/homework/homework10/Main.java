@@ -1,15 +1,21 @@
 package ua.myCompany.homework.homework10;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Integer> main = new ArrayList<>();
-        main.add(10);
-        main.remove(10);
-        System.out.println(main.isEmpty());
+//         Class<A> clazz = A.class;
+//        Constructor<A> declaredConstructor = clazz.getDeclaredConstructor();
+//        declaredConstructor.setAccessible(true);
+//        A a = declaredConstructor.newInstance();
+//        Method method = clazz.getDeclaredMethod()
 
-        LinkedList<Integer> list = new LinkedList<>();
-        list.add(10);
-        list.add(20);
-        list.getByIndex(0);
+    }
+}
+class A {
+    private A() {}
+    private void method(String message) {
+        System.out.println(message);
     }
 }

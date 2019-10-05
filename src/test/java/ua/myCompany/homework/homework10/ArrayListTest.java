@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ArrayListTest {
-    ArrayList<Integer> testList;
+    private ArrayList<Integer> testList;
 
     @Before
     public void setup() {
@@ -19,11 +19,6 @@ public class ArrayListTest {
     }
 
     @Test
-    public void add() {
-
-    }
-
-    @Test
     public void getByIndexComparisonTest() {
         testList.add(5);
         testList.add(4);
@@ -32,7 +27,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void removeShouldWorkCorrectly() {
+    public void removeUsualBehaviour() {
         testList = new ArrayList<>(2);
         ArrayList<Integer> dud = new ArrayList<>(2);
         dud.add(2);

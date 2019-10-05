@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
-    LinkedList<Integer> testList;
+    private LinkedList<Integer> testList;
 
     @Before
     public void setup(){
