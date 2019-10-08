@@ -8,7 +8,7 @@ import ua.myCompany.lessons.lesson11.example.com.univer.service.UserServiceImpl;
 @org.springframework.context.annotation.Configuration
 public class Configuration {
     @Bean
-    public UserService userService(UserRepository userRepository) {
+    public UserService userService(UserRepository  userRepository) {
         return new UserServiceImpl(userRepository, (user) -> {
             if (user == null) {
                 throw new RuntimeException();
