@@ -31,6 +31,8 @@ public class Main {
         bs.add(null);
 
         LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
+        int[] array = new int[0];
+        System.out.println(array[0]);
 
     }
 }
